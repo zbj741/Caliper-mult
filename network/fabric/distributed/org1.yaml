@@ -13,10 +13,10 @@ services:
     container_name: peer0.org1.example.com
     environment:
       - CORE_PEER_ID=peer0.org1.example.com
-      - CORE_PEER_ADDRESS=10.210.1.21:7051
+      - CORE_PEER_ADDRESS=172.31.0.36:7051
       - CORE_PEER_CHAINCODELISTENADDRESS=peer0.org1.example.com:7052
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=10.210.1.21:7051
-      - CORE_PEER_GOSSIP_BOOTSTRAP=10.210.1.21:7051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=172.31.0.36:7051
+      - CORE_PEER_GOSSIP_BOOTSTRAP=172.31.0.36:8051
       - CORE_PEER_LOCALMSPID=Org1MSP
     volumes:
       - /var/run/:/host/var/run/
@@ -38,10 +38,10 @@ services:
     container_name: peer1.org1.example.com
     environment:
       - CORE_PEER_ID=peer1.org1.example.com
-      - CORE_PEER_ADDRESS=10.210.1.21:8051
+      - CORE_PEER_ADDRESS=172.31.0.36:8051
       - CORE_PEER_CHAINCODELISTENADDRESS=peer1.org1.example.com:7052
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=10.210.1.21:8051
-      - CORE_PEER_GOSSIP_BOOTSTRAP=10.210.1.21:8051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=172.31.0.36:8051
+      - CORE_PEER_GOSSIP_BOOTSTRAP=172.31.0.36:7051
       - CORE_PEER_LOCALMSPID=Org1MSP
     volumes:
       - /var/run/:/host/var/run/

@@ -27,9 +27,9 @@ services:
       - 9052:7052
       - 9053:7053
     extra_hosts:
-      - "orderer1.example.com:10.210.1.21"
-      - "orderer2.example.com:10.210.1.21"
-      - "orderer3.example.com:10.210.1.21"
+      - "orderer1.example.com:172.31.0.36"
+      - "orderer2.example.com:172.31.0.36"
+      - "orderer3.example.com:172.31.0.36"
 
   peer1.org2.example.com:
     extends:
@@ -52,6 +52,6 @@ services:
       - 10052:7052
       - 10053:7053
     extra_hosts:
-      - "orderer1.example.com:10.210.1.21"
-      - "orderer2.example.com:10.210.1.21"
-      - "orderer3.example.com:10.210.1.21"
+      - "orderer1.example.com:172.31.0.36"
+      - "orderer2.example.com:172.31.0.36"
+      - "orderer3.example.com:172.31.0.36"

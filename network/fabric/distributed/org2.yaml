@@ -13,9 +13,9 @@ services:
     container_name: peer0.org2.example.com
     environment:
       - CORE_PEER_ID=peer0.org2.example.com
-      - CORE_PEER_ADDRESS=172.31.0.38:9051
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=172.31.0.38:9051
-      - CORE_PEER_GOSSIP_BOOTSTRAP=172.31.0.38:10051
+      - CORE_PEER_ADDRESS=172.31.0.28:9051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=172.31.0.28:9051
+      - CORE_PEER_GOSSIP_BOOTSTRAP=172.31.0.28:10051
       - CORE_PEER_CHAINCODELISTENADDRESS=peer0.org2.example.com:7052
       - CORE_PEER_LOCALMSPID=Org2MSP
     volumes:
@@ -27,9 +27,9 @@ services:
       - 9052:7052
       - 9053:7053
     extra_hosts:
-      - "orderer1.example.com:172.31.0.36"
-      - "orderer2.example.com:172.31.0.36"
-      - "orderer3.example.com:172.31.0.36"
+      - "orderer1.example.com:172.31.0.24"
+      - "orderer2.example.com:172.31.0.24"
+      - "orderer3.example.com:172.31.0.24"
 
   peer1.org2.example.com:
     extends:
@@ -38,9 +38,9 @@ services:
     container_name: peer1.org2.example.com
     environment:
       - CORE_PEER_ID=peer1.org2.example.com
-      - CORE_PEER_ADDRESS=172.31.0.38:10051
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=172.31.0.38:10051
-      - CORE_PEER_GOSSIP_BOOTSTRAP=172.31.0.38:9051
+      - CORE_PEER_ADDRESS=172.31.0.28:10051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=172.31.0.28:10051
+      - CORE_PEER_GOSSIP_BOOTSTRAP=172.31.0.28:9051
       - CORE_PEER_CHAINCODELISTENADDRESS=peer1.org2.example.com:7052
       - CORE_PEER_LOCALMSPID=Org2MSP
     volumes:
@@ -52,6 +52,6 @@ services:
       - 10052:7052
       - 10053:7053
     extra_hosts:
-      - "orderer1.example.com:172.31.0.36"
-      - "orderer2.example.com:172.31.0.36"
-      - "orderer3.example.com:172.31.0.36"
+      - "orderer1.example.com:172.31.0.24"
+      - "orderer2.example.com:172.31.0.24"
+      - "orderer3.example.com:172.31.0.24"

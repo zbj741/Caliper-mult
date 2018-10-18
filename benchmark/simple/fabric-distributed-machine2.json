@@ -3,7 +3,7 @@
     "cryptodir": "network/fabric/distributed/crypto-config",
     "network": {
       "orderer": {
-        "url": "grpc://172.31.0.36:7050",
+        "url": "grpc://172.31.0.24:7050",
         "mspid": "OrdererMSP",
         "user": {
           "key": "network/fabric/distributed/crypto-config/ordererOrganizations/example.com/users/Admin@example.com/msp/keystore/93ede1a18d1320f4ba822c84ab292f9ce5a8ddb8d9705f04eedf3af2c3ec8ce1_sk",
@@ -20,14 +20,14 @@
           "cert": "network/fabric/distributed/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
         },
         "peer1": {
-          "requests": "grpc://172.31.0.36:7051",
-          "events": "grpc://172.31.0.36:7053",
+          "requests": "grpc://172.31.0.24:7051",
+          "events": "grpc://172.31.0.24:7053",
           "server-hostname": "peer0.org1.example.com",
           "tls_cacerts": "network/fabric/distributed/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
         },
         "peer2": {
-          "requests": "grpc://172.31.0.36:8051",
-          "events": "grpc://172.31.0.36:8053",
+          "requests": "grpc://172.31.0.24:8051",
+          "events": "grpc://172.31.0.24:8053",
           "server-hostname": "peer1.org1.example.com",
           "tls_cacerts": "network/fabric/distributed/crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls/ca.crt"
         }
@@ -40,14 +40,14 @@
           "cert": "network/fabric/distributed/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem"
         },
         "peer1": {
-          "requests": "grpc://172.31.0.41:9051",
-          "events": "grpc://172.31.0.41:9053",
+          "requests": "grpc://172.31.0.28:9051",
+          "events": "grpc://172.31.0.28:9053",
           "server-hostname": "peer0.org2.example.com",
           "tls_cacerts": "network/fabric/distributed/crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt"
         },
         "peer2": {
-          "requests": "grpc://172.31.0.41:10051",
-          "events": "grpc://172.31.0.41:10053",
+          "requests": "grpc://172.31.0.28:10051",
+          "events": "grpc://172.31.0.28:10053",
           "server-hostname": "peer1.org2.example.com",
           "tls_cacerts": "network/fabric/distributed/crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/ca.crt"
         }
